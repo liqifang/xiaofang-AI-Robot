@@ -14,12 +14,8 @@ log/
 target/
 
 # 本地开发配置文件（根据你实际文件名选几行加进去）
-application-local.yml
-application-local.properties
 application-dev.yml
-application-dev.properties
 application-prod.yml
-application-prod.properties
 
 # IDEA 自己的文件（强烈建议也忽略，防止冲突）
 *.iml
