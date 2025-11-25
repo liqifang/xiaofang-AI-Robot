@@ -20,6 +20,11 @@ public enum ResponseCodeEnum implements BaseExceptionInterface {
 
     // ----------- 业务异常状态码 -----------
     CHAT_NOT_EXISTED("20000", "此对话不存在"),
+    UPLOAD_FILE_CANT_EMPTY("20001", "上传文件不能为空"),
+    ONLY_SUPPORT_MARKDOWN("20002", "仅支持 Markdown 文件（.md 后缀）"),
+    UPLOAD_FILE_FAILED("20003", "文件上传失败"),
+    MARKDOWN_FILE_NOT_FOUND("20004", "Markdown 问答文件不存在"),
+    MARKDOWN_FILE_CANT_DELETE("20005", "正在处理中的 Markdown 问答文件，不允许删除"),
     ;
 
     // 异常码

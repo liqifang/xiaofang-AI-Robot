@@ -21,6 +21,7 @@
         <spring-ai.version>1.0.0</spring-ai.version>
         <!-- 常用工具类 -->
         <commons-lang3.version>3.12.0</commons-lang3.version>
+        <commons-io.version>2.20.0</commons-io.version>
         <lombok.version>1.18.30</lombok.version>
         <guava.version>33.0.0-jre</guava.version>
         <!-- Mybatis Plus -->
@@ -70,6 +71,12 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang3.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
         </dependency>
 
         <dependency>
@@ -166,6 +173,18 @@
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
             <version>${jsoup.version}</version>
+        </dependency>
+
+        <!-- 读取 Markdown，并解析为 Document 文档 -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-markdown-document-reader</artifactId>
+        </dependency>
+
+        <!-- PGvector 向量化存储 -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-vector-store-pgvector</artifactId>
         </dependency>
     </dependencies>
 
