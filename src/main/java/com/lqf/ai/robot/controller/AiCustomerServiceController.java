@@ -51,8 +51,8 @@ public class AiCustomerServiceController {
 
     /**
      * 问答 MD 文件上传
-     * @param file
-     * @return
+     * @param file 上传文件
+     * @return 上传结果
      */
     @PostMapping(value = "/md/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public Response<?> uploadMarkdownFile(@RequestPart(value = "file", required = false) MultipartFile file) {
@@ -79,12 +79,8 @@ public class AiCustomerServiceController {
 
     /**
      * 流式对话
-     * @return
+     * @return 流式对话结果
      */
-    // 测试用
-    // @GetMapping(value = "/chat/completion", produces = "text/html;charset=utf-8")
-    // @ApiOperationLog(description = "AI 智能客服对话")
-    // public Flux<String> chat(@RequestParam(value = "message") String userMessage) {
     @PostMapping(value = "/chat/completion", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     @ApiOperationLog(description = "AI 智能客服对话")
     public Flux<String> chat(@RequestBody @Validated AiCustomerServiceChatReqVO aiChatReqVO) {
